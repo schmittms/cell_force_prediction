@@ -1,0 +1,747 @@
+  jupyter lab --no-browser --ContentsManager.allow_hidden=True --ip=${HOST_IP} --port 8112 
+[I 2023-05-17 15:22:33.139 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-05-17 15:22:33.437 ServerApp] jupyterlab_hdf | extension was found and enabled by nbclassic. Consider moving the extension to Jupyter Server's extension paths.
+[I 2023-05-17 15:22:33.438 ServerApp] jupyterlab_hdf | extension was successfully linked.
+[I 2023-05-17 15:22:33.459 ServerApp] nbresuse | extension was found and enabled by nbclassic. Consider moving the extension to Jupyter Server's extension paths.
+[I 2023-05-17 15:22:33.459 ServerApp] nbresuse | extension was successfully linked.
+[I 2023-05-17 15:22:33.459 ServerApp] nbclassic | extension was successfully linked.
+[I 2023-05-17 15:22:33.474 LabApp] JupyterLab extension loaded from /project/vitelli/ml_venv/lib/python3.7/site-packages/jupyterlab
+[I 2023-05-17 15:22:33.474 LabApp] JupyterLab application directory is /project/vitelli/ml_venv/share/jupyter/lab
+[I 2023-05-17 15:22:33.477 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-05-17 15:22:33.478 ServerApp] jupyterlab_hdf | extension was successfully loaded.
+[I 2023-05-17 15:22:33.481 ServerApp] nbclassic | extension was successfully loaded.
+[I 2023-05-17 15:22:33.482 ServerApp] nbresuse | extension was successfully loaded.
+[I 2023-05-17 15:22:33.482 ServerApp] Serving notebooks from local directory: /project/vitelli/matthew/cell_force_prediction_public
+[I 2023-05-17 15:22:33.482 ServerApp] Jupyter Server 1.6.4 is running at:
+[I 2023-05-17 15:22:33.482 ServerApp] http://10.50.250.219:8112/lab?token=...
+[I 2023-05-17 15:22:33.482 ServerApp]     http://127.0.0.1:8112/lab?token=...
+[I 2023-05-17 15:22:33.482 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2023-05-17 15:25:05.852 ServerApp] 302 GET / (10.50.248.66) 0.41ms
+[I 2023-05-17 15:25:05.863 LabApp] 302 GET /lab? (10.50.248.66) 0.62ms
+[I 2023-05-17 15:25:09.104 ServerApp] 302 POST /login?next=%2Flab%3F (10.50.248.66) 0.90ms
+[E 2023-05-17 15:25:15.713 ServerApp] Uncaught exception GET /api/nbconvert?1684355115071 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='GET', uri='/api/nbconvert?1684355115071', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1702, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 3173, in wrapper
+        return method(self, *args, **kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        exporters = base.get_export_names()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 102, in get_exporter
+        if getattr(exporter(config=config), 'enabled', True):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 325, in __init__
+        super().__init__(config=config, **kw)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 114, in __init__
+        self._init_preprocessors()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 491, in _init_preprocessors
+        conf = self._get_conf()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 509, in _get_conf
+        if conf_path.exists():
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1361, in exists
+        self.stat()
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1183, in stat
+        return self._accessor.stat(self)
+    PermissionError: [Errno 13] Permission denied: '/project/vitelli/ml_venv/share/jupyter/nbconvert/templates/html/conf.json'
+[W 2023-05-17 15:25:15.722 ServerApp] Unhandled error
+[E 2023-05-17 15:25:15.723 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab?",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355107|23:username-localhost-8111|44:OWJiNjUxZmExNWE4NDc4NGI3MjVlZDQ0Y2JhOTY5MGU=|95b5d0143186f189633b00ded72b3502fa7708a0b1f19ad592ea06cc86e37c8f\"; username-localhost-8112=\"2|1:0|10:1684355115|23:username-localhost-8112|44:ZThjMjcxMTEyMTIyNGJiZmJiNWMxMTk3ZGUyZTY3MDI=|361dc689963743d00da78bd6799e02acec255288e719d1983b62d54b500393e9\""
+    }
+[E 2023-05-17 15:25:15.723 ServerApp] 500 GET /api/nbconvert?1684355115071 (10.50.248.66) 143.18ms referer=http://localhost:8112/lab?
+[E 2023-05-17 15:25:15.809 ServerApp] Uncaught exception GET /api/nbconvert?1684355115072 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='GET', uri='/api/nbconvert?1684355115072', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1702, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 3173, in wrapper
+        return method(self, *args, **kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        exporters = base.get_export_names()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 102, in get_exporter
+        if getattr(exporter(config=config), 'enabled', True):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 325, in __init__
+        super().__init__(config=config, **kw)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 114, in __init__
+        self._init_preprocessors()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 491, in _init_preprocessors
+        conf = self._get_conf()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 509, in _get_conf
+        if conf_path.exists():
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1361, in exists
+        self.stat()
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1183, in stat
+        return self._accessor.stat(self)
+    PermissionError: [Errno 13] Permission denied: '/project/vitelli/ml_venv/share/jupyter/nbconvert/templates/html/conf.json'
+[W 2023-05-17 15:25:15.809 ServerApp] Unhandled error
+[E 2023-05-17 15:25:15.809 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab?",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355107|23:username-localhost-8111|44:OWJiNjUxZmExNWE4NDc4NGI3MjVlZDQ0Y2JhOTY5MGU=|95b5d0143186f189633b00ded72b3502fa7708a0b1f19ad592ea06cc86e37c8f\"; username-localhost-8112=\"2|1:0|10:1684355115|23:username-localhost-8112|44:ZThjMjcxMTEyMTIyNGJiZmJiNWMxMTk3ZGUyZTY3MDI=|361dc689963743d00da78bd6799e02acec255288e719d1983b62d54b500393e9\""
+    }
+[E 2023-05-17 15:25:15.809 ServerApp] 500 GET /api/nbconvert?1684355115072 (10.50.248.66) 229.15ms referer=http://localhost:8112/lab?
+[W 2023-05-17 15:25:15.865 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?content=0&1684355115640 (10.50.248.66): No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb
+[W 2023-05-17 15:25:15.865 ServerApp] No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb
+[W 2023-05-17 15:25:15.865 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?content=0&1684355115640 (10.50.248.66) 0.82ms referer=http://localhost:8112/lab?
+[W 2023-05-17 15:25:15.866 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb?content=0&1684355115642 (10.50.248.66): No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:25:15.866 ServerApp] No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:25:15.867 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb?content=0&1684355115642 (10.50.248.66) 0.72ms referer=http://localhost:8112/lab?
+[W 2023-05-17 15:25:15.872 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/train_predictor.py?content=0&1684355115643 (10.50.248.66): No such file or directory: cell_stress/force_prediction_convnext/train_predictor.py
+[W 2023-05-17 15:25:15.873 ServerApp] No such file or directory: cell_stress/force_prediction_convnext/train_predictor.py
+[W 2023-05-17 15:25:15.873 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/train_predictor.py?content=0&1684355115643 (10.50.248.66) 0.72ms referer=http://localhost:8112/lab?
+[W 2023-05-17 15:25:15.873 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/sbatch_train.sbatch?content=0&1684355115643 (10.50.248.66): No such file or directory: cell_stress/force_prediction_convnext/sbatch_train.sbatch
+[W 2023-05-17 15:25:15.874 ServerApp] No such file or directory: cell_stress/force_prediction_convnext/sbatch_train.sbatch
+[W 2023-05-17 15:25:15.874 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/sbatch_train.sbatch?content=0&1684355115643 (10.50.248.66) 0.70ms referer=http://localhost:8112/lab?
+[W 2023-05-17 15:25:16.462 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction?1684355116279 (10.50.248.66): No such file or directory: cell_stress/src_force_prediction
+[W 2023-05-17 15:25:16.462 ServerApp] No such file or directory: cell_stress/src_force_prediction
+[W 2023-05-17 15:25:16.462 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction?1684355116279 (10.50.248.66) 0.92ms referer=http://localhost:8112/lab?
+[I 2023-05-17 15:25:16.945 LabApp] Build is up to date
+[W 2023-05-17 15:25:23.143 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:25:26.200 ServerApp] Kernel started: f837ee18-72af-4897-894d-478dabd3d72d
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[IPKernelApp] WARNING | No such comm: 26c96842-4577-4730-ab23-2493265d5e7e
+[I 2023-05-17 15:27:27.166 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:27:27.167 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[W 2023-05-17 15:29:20.679 ServerApp] delete /data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv
+[E 2023-05-17 15:29:20.680 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv?1684355360495 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv?1684355360495', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_force_baselines_bydataset_WC.csv'
+[W 2023-05-17 15:29:20.681 ServerApp] Unhandled error
+[E 2023-05-17 15:29:20.681 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355360|23:username-localhost-8112|44:ZDZiZWQzMWE3YmI5NDExNmE5MWY2YzYzOWUxMzZkNGE=|ae7c4f941a36a2bd5cc392396896e2ee8a44059dbc982790f8296957f7e8412c\""
+    }
+[E 2023-05-17 15:29:20.681 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv?1684355360495 (10.50.248.66) 2.31ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.527 ServerApp] delete /data/TractionData_16kPa_WT/cell_force_baselines.csv
+[E 2023-05-17 15:29:27.527 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines.csv?1684355367319 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_force_baselines.csv?1684355367319', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_force_baselines.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_force_baselines.csv'
+[W 2023-05-17 15:29:27.528 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.528 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:M2IzODc2ZWEyNWE3NDE1MDg3ZWEwNDNlN2M1MGUyNmU=|d18fc415c56b27246237103a546e6cb004868293ed3efc5820477c589b127c10\""
+    }
+[E 2023-05-17 15:29:27.528 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines.csv?1684355367319 (10.50.248.66) 1.91ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.528 ServerApp] delete /data/TractionData_16kPa_WT/cell_force_baselines_bydataset.csv
+[E 2023-05-17 15:29:27.528 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset.csv?1684355367321 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset.csv?1684355367321', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_force_baselines_bydataset.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_force_baselines_bydataset.csv'
+[W 2023-05-17 15:29:27.529 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.529 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:M2IzODc2ZWEyNWE3NDE1MDg3ZWEwNDNlN2M1MGUyNmU=|d18fc415c56b27246237103a546e6cb004868293ed3efc5820477c589b127c10\""
+    }
+[E 2023-05-17 15:29:27.529 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset.csv?1684355367321 (10.50.248.66) 2.47ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.529 ServerApp] delete /data/TractionData_16kPa_WT/cell_mean_baselines_WC.csv
+[E 2023-05-17 15:29:27.529 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_mean_baselines_WC.csv?1684355367323 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_mean_baselines_WC.csv?1684355367323', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_mean_baselines_WC.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_mean_baselines_WC.csv'
+[W 2023-05-17 15:29:27.529 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.530 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:M2IzODc2ZWEyNWE3NDE1MDg3ZWEwNDNlN2M1MGUyNmU=|d18fc415c56b27246237103a546e6cb004868293ed3efc5820477c589b127c10\""
+    }
+[E 2023-05-17 15:29:27.530 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_mean_baselines_WC.csv?1684355367323 (10.50.248.66) 3.04ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.531 ServerApp] delete /data/TractionData_16kPa_WT/cell_force_baselines_WC.csv
+[E 2023-05-17 15:29:27.531 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_WC.csv?1684355367323 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_force_baselines_WC.csv?1684355367323', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_force_baselines_WC.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_force_baselines_WC.csv'
+[W 2023-05-17 15:29:27.531 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.531 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:M2IzODc2ZWEyNWE3NDE1MDg3ZWEwNDNlN2M1MGUyNmU=|d18fc415c56b27246237103a546e6cb004868293ed3efc5820477c589b127c10\""
+    }
+[E 2023-05-17 15:29:27.531 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_WC.csv?1684355367323 (10.50.248.66) 1.45ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.532 ServerApp] delete /data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv
+[E 2023-05-17 15:29:27.532 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv?1684355367324 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv?1684355367324', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_force_baselines_bydataset_WC.csv'
+[W 2023-05-17 15:29:27.532 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.532 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:M2IzODc2ZWEyNWE3NDE1MDg3ZWEwNDNlN2M1MGUyNmU=|d18fc415c56b27246237103a546e6cb004868293ed3efc5820477c589b127c10\""
+    }
+[E 2023-05-17 15:29:27.532 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_force_baselines_bydataset_WC.csv?1684355367324 (10.50.248.66) 1.97ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.560 ServerApp] delete /data/TractionData_16kPa_WT/cell_mean_baselines.csv
+[E 2023-05-17 15:29:27.560 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/cell_mean_baselines.csv?1684355367325 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/cell_mean_baselines.csv?1684355367325', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/cell_mean_baselines.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_mean_baselines.csv'
+[W 2023-05-17 15:29:27.560 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.561 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:M2IzODc2ZWEyNWE3NDE1MDg3ZWEwNDNlN2M1MGUyNmU=|d18fc415c56b27246237103a546e6cb004868293ed3efc5820477c589b127c10\""
+    }
+[E 2023-05-17 15:29:27.561 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/cell_mean_baselines.csv?1684355367325 (10.50.248.66) 1.09ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:27.562 ServerApp] delete /data/TractionData_16kPa_WT/dataset.csv
+[E 2023-05-17 15:29:27.562 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/dataset.csv?1684355367370 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/dataset.csv?1684355367370', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/dataset.csv' -> b'/home/schmittms/.local/share/Trash/files/dataset.csv'
+[W 2023-05-17 15:29:27.563 ServerApp] Unhandled error
+[E 2023-05-17 15:29:27.563 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355358|23:username-localhost-8111|44:ODVhM2RkZTcyNzQ1NGI5YWJlZDM0OTFjODFlOTMwMzg=|e46e0706391e58d401eab62d89547050549cb0799cb1f9933018862630f9f997\"; username-localhost-8112=\"2|1:0|10:1684355367|23:username-localhost-8112|44:MWU4YzcxY2IyMWY0NDYwYjk1ODE0Mzc1YzUzOTFlMGY=|9633acd898a8fea01f2390083106cbab67fca5a58bec4471defbdbb1f3fa172d\""
+    }
+[E 2023-05-17 15:29:27.563 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/dataset.csv?1684355367370 (10.50.248.66) 1.07ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[I 2023-05-17 15:29:39.266 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:29:39.267 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:31:42.218 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:31:42.219 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:33:43.388 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:33:43.389 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:35:26.791 ServerApp] Creating new notebook in /data/TractionData_16kPa_WT
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[I 2023-05-17 15:35:27.218 ServerApp] Kernel started: 96a4837a-9aca-4a80-a475-ea2c12c30dc3
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[IPKernelApp] WARNING | No such comm: 81565934-7cc6-4650-b19d-37070632a1d8
+[I 2023-05-17 15:35:36.914 ServerApp] Kernel shutdown: 96a4837a-9aca-4a80-a475-ea2c12c30dc3
+[W 2023-05-17 15:35:37.160 ServerApp] delete /data/TractionData_16kPa_WT/Untitled.ipynb
+[E 2023-05-17 15:35:37.161 ServerApp] Uncaught exception DELETE /api/contents/data/TractionData_16kPa_WT/Untitled.ipynb?1684355737151 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data/TractionData_16kPa_WT/Untitled.ipynb?1684355737151', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data/TractionData_16kPa_WT/Untitled.ipynb' -> b'/home/schmittms/.local/share/Trash/files/Untitled 1.ipynb'
+[W 2023-05-17 15:35:37.162 ServerApp] Unhandled error
+[E 2023-05-17 15:35:37.162 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data/TractionData_16kPa_WT/Untitled.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684355733|23:username-localhost-8111|44:NDk4Yzg1ZDJhNjQxNDhmZGJmNWIwNGNkOTYyMWU3NDI=|c7bf997753552192606c95e0709ccab8a4cd449ec9a97404c5ef13a753549e5a\"; username-localhost-8112=\"2|1:0|10:1684355737|23:username-localhost-8112|44:ZWVhYzRlMzM4MGEwNDViYjk2ZWRmOTQzMjg5YzAxZTA=|059015ebdef0947d741ec1473d68c40b3ab924a3f17ae8d3913255a2c503d0e2\""
+    }
+[E 2023-05-17 15:35:37.162 ServerApp] 500 DELETE /api/contents/data/TractionData_16kPa_WT/Untitled.ipynb?1684355737151 (10.50.248.66) 2.15ms referer=http://localhost:8112/lab/tree/data/TractionData_16kPa_WT/Untitled.ipynb
+[I 2023-05-17 15:35:44.147 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:35:44.148 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[I 2023-05-17 15:37:45.250 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:37:45.251 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:39:48.435 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:39:48.436 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:41:50.363 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:41:50.364 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:43:52.560 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:43:52.561 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:45:55.289 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:45:55.290 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:47:57.510 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:47:57.511 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:50:00.113 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:50:00.114 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:52:02.291 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:52:02.291 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:52:03.584 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:52:03.585 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:54:05.151 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:54:05.152 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:56:06.646 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:56:06.646 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:58:08.166 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 15:58:08.167 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 15:58:14.275 ServerApp] Kernel restarted: f837ee18-72af-4897-894d-478dabd3d72d
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: b66c2d47-8104-4ccc-9687-9cc97d09d371
+[I 2023-05-17 16:00:09.075 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:00:09.076 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:02:10.525 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:02:10.536 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:04:12.021 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:04:12.033 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:06:13.332 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:06:13.332 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:20:15.049 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:20:15.050 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:22:16.623 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:22:16.634 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:22:48.303 ServerApp] Kernel interrupted: f837ee18-72af-4897-894d-478dabd3d72d
+[I 2023-05-17 16:24:18.138 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:24:18.148 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:25:23.640 ServerApp] Kernel interrupted: f837ee18-72af-4897-894d-478dabd3d72d
+[I 2023-05-17 16:26:20.243 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:26:20.243 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:28:22.003 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:28:22.004 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:30:23.597 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:30:23.597 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[I 2023-05-17 16:32:24.928 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:32:24.928 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[W 2023-05-17 16:34:00.090 ServerApp] delete /cell_force_baselines_bydataset.csv
+[E 2023-05-17 16:34:00.090 ServerApp] Uncaught exception DELETE /api/contents/cell_force_baselines_bydataset.csv?1684359239972 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/cell_force_baselines_bydataset.csv?1684359239972', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/cell_force_baselines_bydataset.csv' -> b'/home/schmittms/.local/share/Trash/files/cell_force_baselines_bydataset.csv'
+[W 2023-05-17 16:34:00.108 ServerApp] Unhandled error
+[E 2023-05-17 16:34:00.108 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684359238|23:username-localhost-8111|44:ZjRmNjhmMzUzY2FmNGM4YWEyOGMzYmU4MTQyNThhZWQ=|4c352a91f153385e713cb6878310d19d3af0872e859473939648fea12ed035a0\"; username-localhost-8112=\"2|1:0|10:1684359239|23:username-localhost-8112|44:NjJlNWY0NDkyMzc5NDk1ODg2NzM4MWExMDU1YjRlMTA=|a65d854786cd7f338a4b9a84ef7204be3890f5f8e2e5aeea4aa4b058943ff1bf\""
+    }
+[E 2023-05-17 16:34:00.108 ServerApp] 500 DELETE /api/contents/cell_force_baselines_bydataset.csv?1684359239972 (10.50.248.66) 18.47ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[I 2023-05-17 16:34:26.156 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[W 2023-05-17 16:34:26.157 ServerApp] Notebook data_preprocessing/DatasetBaselineMakerALL.ipynb is not trusted
+[W 2023-05-17 16:35:14.353 ServerApp] delete /data_preprocessing/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb
+[E 2023-05-17 16:35:14.353 ServerApp] Uncaught exception DELETE /api/contents/data_preprocessing/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?1684359314357 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data_preprocessing/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?1684359314357', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data_preprocessing/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb' -> b'/home/schmittms/.local/share/Trash/files/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb'
+[W 2023-05-17 16:35:14.354 ServerApp] Unhandled error
+[E 2023-05-17 16:35:14.354 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684359314|23:username-localhost-8111|44:Y2Y5ZmNmM2NmZDEwNDUwMzllNDI5ZDI2ZGQyNTg2Nzg=|23ed2e3b4a952268284df66315989cbf9250594aaa76d261c2ca753c1d47a5bd\"; username-localhost-8112=\"2|1:0|10:1684359314|23:username-localhost-8112|44:MWNmMmMwNGI1ODBkNDAyNWI5MzI4ODQzNGQ5NGExNTc=|a446ed1313925ae2c492613261c45d69c0a35cd53b499d011df4439dea6ff37c\""
+    }
+[E 2023-05-17 16:35:14.369 ServerApp] 500 DELETE /api/contents/data_preprocessing/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?1684359314357 (10.50.248.66) 1.52ms referer=http://localhost:8112/lab/tree/data_preprocessing/DatasetBaselineMakerALL.ipynb
+[I 2023-05-17 16:35:30.615 ServerApp] Saving file at /data_preprocessing/DatasetBaselineMakerALL.ipynb
+[I 2023-05-17 16:37:32.131 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:39:33.254 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:41:34.243 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:43:35.571 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:45:37.049 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:47:38.315 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:49:39.562 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:50:33.453 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[I 2023-05-17 16:50:35.152 ServerApp] Saving file at /data_preprocessing/DatasetBaselines.ipynb
+[W 2023-05-17 16:51:23.017 ServerApp] delete /data_preprocessing/matlab_processing.py
+[E 2023-05-17 16:51:23.017 ServerApp] Uncaught exception DELETE /api/contents/data_preprocessing/matlab_processing.py?1684360283010 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/data_preprocessing/matlab_processing.py?1684360283010', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/data_preprocessing/matlab_processing.py' -> b'/home/schmittms/.local/share/Trash/files/matlab_processing.py'
+[W 2023-05-17 16:51:23.018 ServerApp] Unhandled error
+[E 2023-05-17 16:51:23.018 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/data_preprocessing/matlab_processing.py",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684360282|23:username-localhost-8111|44:ZDJmMTAwOTA0ZDQ3NGFjOTg3MjExY2JmMjM1ZjMyYWY=|635a6578b49bf498c770dfba21d15863c1b131bfb18a7c7fd0a4d1e61669ad51\"; username-localhost-8112=\"2|1:0|10:1684360282|23:username-localhost-8112|44:MWFhMjgyMzAyYWYwNDU1NzkyMWM2ZTkyNTQ4YTQ4NzQ=|bced5d68bba03f654e49d25a781a02af033f085be6effb6e63ab83553f159f76\""
+    }
+[E 2023-05-17 16:51:23.038 ServerApp] 500 DELETE /api/contents/data_preprocessing/matlab_processing.py?1684360283010 (10.50.248.66) 1.42ms referer=http://localhost:8112/lab/tree/data_preprocessing/matlab_processing.py
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[I 2023-05-17 16:52:41.171 ServerApp] Kernel started: b75f3b45-02df-4ead-b88c-023ea0bcce97
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[IPKernelApp] WARNING | No such comm: 74b05783-17de-4b07-af5f-bb2fdc7f0868
+[IPKernelApp] ERROR | UNKNOWN CONTROL MESSAGE TYPE: 'debug_request'
+[W 2023-05-17 16:53:59.387 ServerApp] delete /eval_predictor_scheduled.py
+[E 2023-05-17 16:53:59.388 ServerApp] Uncaught exception DELETE /api/contents/eval_predictor_scheduled.py?1684360439318 (10.50.248.66)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='DELETE', uri='/api/contents/eval_predictor_scheduled.py?1684360439318', version='HTTP/1.1', remote_ip='10.50.248.66')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/handlers.py", line 229, in delete
+        await ensure_async(cm.delete(path))
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 285, in delete
+        self.delete_file(path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/contents/filemanager.py", line 491, in delete_file
+        send2trash(os_path)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 192, in send2trash
+        trash_move(path_b, dest_trash, topdir)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/send2trash/plat_other.py", line 103, in trash_move
+        os.rename(src, op.join(filespath, destname))
+    OSError: [Errno 18] Invalid cross-device link: b'/project/vitelli/matthew/cell_force_prediction_public/eval_predictor_scheduled.py' -> b'/home/schmittms/.local/share/Trash/files/eval_predictor_scheduled.py'
+[W 2023-05-17 16:53:59.388 ServerApp] Unhandled error
+[E 2023-05-17 16:53:59.388 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Origin": "http://localhost:8112",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/DataPreprocessing.ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684360439|23:username-localhost-8111|44:MTMwNmVjOTI3NWU1NDJhMTg3ODU0ZDA1ZDU3NzMzY2E=|6833f81ad93f59fd46487321814887a1b44ddb729f9f5519631708ef9a516463\"; username-localhost-8112=\"2|1:0|10:1684360439|23:username-localhost-8112|44:YWRhMzI0NDk5YzZhNDI5M2FmZTU2ODkyOTY3YTM1MjI=|20a316680e1f74aad67ede062eb9dab678834901a39065c72bb8daadca102d89\""
+    }
+[E 2023-05-17 16:53:59.400 ServerApp] 500 DELETE /api/contents/eval_predictor_scheduled.py?1684360439318 (10.50.248.66) 1.25ms referer=http://localhost:8112/lab/tree/DataPreprocessing.ipynb
