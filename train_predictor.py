@@ -89,8 +89,8 @@ if __name__=='__main__':
     for a in vars(args):
         if isinstance( getattr(args, a), str):
             setattr(args, a, getattr(args, a).replace(' ', ''))
-            
-    
+
+
 # Process model hyperparams
     prepend_hparams=[]
     encoder_hparams=[]
@@ -139,6 +139,7 @@ if __name__=='__main__':
                                                                         perturb_input=args.perturb_input, 
                                                                         perturb_output=args.perturb_output, add_noise=args.add_noise)
                         }
+
     dataset_kwargs = { 
                         'root': args.directory,
                         'force_load': False,
