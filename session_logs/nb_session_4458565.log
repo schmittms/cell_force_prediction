@@ -746,3 +746,130 @@
     }
 [E 2023-05-17 16:53:59.400 ServerApp] 500 DELETE /api/contents/eval_predictor_scheduled.py?1684360439318 (10.50.248.66) 1.25ms referer=http://localhost:8112/lab/tree/DataPreprocessing.ipynb
 [I 2023-05-17 16:58:50.504 ServerApp] Saving file at /train_predictor.py
+[I 2023-05-17 17:21:12.304 ServerApp] Starting buffering for b75f3b45-02df-4ead-b88c-023ea0bcce97:20c190d2-c4dc-44fc-ac11-c5e8e8f881e8
+[I 2023-05-17 17:21:12.307 ServerApp] Starting buffering for f837ee18-72af-4897-894d-478dabd3d72d:cba4ca90-77fd-4958-9949-b44483c3b89f
+[I 2023-05-17 17:21:15.840 ServerApp] Restoring connection for b75f3b45-02df-4ead-b88c-023ea0bcce97:20c190d2-c4dc-44fc-ac11-c5e8e8f881e8
+[I 2023-05-17 17:21:15.850 ServerApp] Restoring connection for f837ee18-72af-4897-894d-478dabd3d72d:cba4ca90-77fd-4958-9949-b44483c3b89f
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: bacebc49-d3ca-479b-ad78-9e8fde5d069c
+[W 2023-05-17 17:22:45.841 ServerApp] WebSocket ping timeout after 90001 ms.
+[W 2023-05-17 17:22:45.852 ServerApp] WebSocket ping timeout after 90001 ms.
+[I 2023-05-17 17:22:50.843 ServerApp] Starting buffering for b75f3b45-02df-4ead-b88c-023ea0bcce97:20c190d2-c4dc-44fc-ac11-c5e8e8f881e8
+[I 2023-05-17 17:22:50.854 ServerApp] Starting buffering for f837ee18-72af-4897-894d-478dabd3d72d:cba4ca90-77fd-4958-9949-b44483c3b89f
+[I 2023-05-18 08:31:11.750 LabApp] Build is up to date
+[E 2023-05-18 08:31:31.489 ServerApp] Uncaught exception GET /api/nbconvert?1684416691018 (10.50.248.65)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='GET', uri='/api/nbconvert?1684416691018', version='HTTP/1.1', remote_ip='10.50.248.65')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1702, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 3173, in wrapper
+        return method(self, *args, **kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        exporters = base.get_export_names()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 102, in get_exporter
+        if getattr(exporter(config=config), 'enabled', True):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 325, in __init__
+        super().__init__(config=config, **kw)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 114, in __init__
+        self._init_preprocessors()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 491, in _init_preprocessors
+        conf = self._get_conf()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 509, in _get_conf
+        if conf_path.exists():
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1361, in exists
+        self.stat()
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1183, in stat
+        return self._accessor.stat(self)
+    PermissionError: [Errno 13] Permission denied: '/project/vitelli/ml_venv/share/jupyter/nbconvert/templates/html/conf.json'
+[W 2023-05-18 08:31:31.489 ServerApp] Unhandled error
+[E 2023-05-18 08:31:31.490 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/train_predictor.py",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684416689|23:username-localhost-8111|44:OGU4ZWE1NDM0NzhlNDc3MzllNWIyNzI1MWFmNTUyMzE=|dbd7f909096ede060a3ad4c6e4987257d1f35d57a13b569d74e5855694bd4be1\"; username-localhost-8112=\"2|1:0|10:1684416691|23:username-localhost-8112|44:Y2U0NzJiNDQwMWVhNDdlOGFkMTNiZGU3MzNjMzc0YWU=|ee6d11418b525c3e5890129c2b7b450c67571362518dbf397dae6669c28b9f3e\""
+    }
+[E 2023-05-18 08:31:31.490 ServerApp] 500 GET /api/nbconvert?1684416691018 (10.50.248.65) 96.57ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[E 2023-05-18 08:31:31.576 ServerApp] Uncaught exception GET /api/nbconvert?1684416691019 (10.50.248.65)
+    HTTPServerRequest(protocol='http', host='localhost:8112', method='GET', uri='/api/nbconvert?1684416691019', version='HTTP/1.1', remote_ip='10.50.248.65')
+    Traceback (most recent call last):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 1702, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/tornado/web.py", line 3173, in wrapper
+        return method(self, *args, **kwargs)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        exporters = base.get_export_names()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/base.py", line 102, in get_exporter
+        if getattr(exporter(config=config), 'enabled', True):
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 325, in __init__
+        super().__init__(config=config, **kw)
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 114, in __init__
+        self._init_preprocessors()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 491, in _init_preprocessors
+        conf = self._get_conf()
+      File "/project/vitelli/ml_venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py", line 509, in _get_conf
+        if conf_path.exists():
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1361, in exists
+        self.stat()
+      File "/project/vitelli/ml_venv/lib/python3.7/pathlib.py", line 1183, in stat
+        return self._accessor.stat(self)
+    PermissionError: [Errno 13] Permission denied: '/project/vitelli/ml_venv/share/jupyter/nbconvert/templates/html/conf.json'
+[W 2023-05-18 08:31:31.576 ServerApp] Unhandled error
+[E 2023-05-18 08:31:31.576 ServerApp] {
+      "Host": "localhost:8112",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+      "Dnt": "1",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Authorization": "token schmittms",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+      "Content-Type": "application/json",
+      "X-Xsrftoken": "2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092",
+      "Sec-Ch-Ua-Platform": "\"macOS\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8112/lab/tree/train_predictor.py",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|31021817|f1f44c349ba9a6e8d3c764db04e997fb|1683120092; username-localhost-8888=\"2|1:0|10:1683660876|23:username-localhost-8888|44:ODlhNWNmMGY1OGQyNDJhMzk4ODJlYjI1YjFiNWU2ZTE=|7b4c450deaf2735b73a90c0416a18fbf122adb34120f6ddb1e089d536e3f77a0\"; username-localhost-8587=\"2|1:0|10:1683672129|23:username-localhost-8587|44:NmU4ZGI1NWYzNWEwNDM5Nzk0NzUzYjg3ODg4MGFlYTA=|f6325f988c80285d8575d423837cead4a790e6cef5af8408f5aa3976e11460c5\"; username-localhost-8409=\"2|1:0|10:1683746202|23:username-localhost-8409|44:MmE3YWI5NWMyMmY3NDY3MmFhNjVkMTRiYjYwODM0MzA=|de74c0919bef3dbb1fccbc8ba33edb198731c010df60be4b4ea6fc7acd062bc1\"; username-localhost-8039=\"2|1:0|10:1683756148|23:username-localhost-8039|44:MGI1YTZjOTVkMDU5NDFjZWFlNTBkMDI1ZmFjNTYxYzQ=|e02d8f22a03e38f1953436e9a4e8a67beb17eab64e6e7f6ecd3f846238b298a9\"; username-localhost-8384=\"2|1:0|10:1683927387|23:username-localhost-8384|44:YzVlNmJiMTMzZjdlNDNmMWFmOGExMjVhZDNhYzFmODU=|3ad2116c6e7f8b86a288d07d5b8157b49ed96f7566f7d5c956b4e6bd2d82fa4c\"; username-localhost-8111=\"2|1:0|10:1684416689|23:username-localhost-8111|44:OGU4ZWE1NDM0NzhlNDc3MzllNWIyNzI1MWFmNTUyMzE=|dbd7f909096ede060a3ad4c6e4987257d1f35d57a13b569d74e5855694bd4be1\"; username-localhost-8112=\"2|1:0|10:1684416691|23:username-localhost-8112|44:Y2U0NzJiNDQwMWVhNDdlOGFkMTNiZGU3MzNjMzc0YWU=|ee6d11418b525c3e5890129c2b7b450c67571362518dbf397dae6669c28b9f3e\""
+    }
+[E 2023-05-18 08:31:31.577 ServerApp] 500 GET /api/nbconvert?1684416691019 (10.50.248.65) 182.45ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[W 2023-05-18 08:31:31.605 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb?content=0&1684416691545 (10.50.248.65): No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb
+[W 2023-05-18 08:31:31.605 ServerApp] No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb
+[W 2023-05-18 08:31:31.605 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMakerALL.ipynb?content=0&1684416691545 (10.50.248.65) 1.19ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[W 2023-05-18 08:31:31.606 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?content=0&1684416691544 (10.50.248.65): No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb
+[W 2023-05-18 08:31:31.606 ServerApp] No such file or directory: cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb
+[W 2023-05-18 08:31:31.606 ServerApp] 404 GET /api/contents/cell_stress/src_force_prediction/DatasetBaselineMaker_16kPa_ALL_WildConditions.ipynb?content=0&1684416691544 (10.50.248.65) 1.25ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[W 2023-05-18 08:31:31.608 ServerApp] 404 GET /api/contents/seizures/DataProcessing.ipynb?content=0&1684416691546 (10.50.248.65): No such file or directory: seizures/DataProcessing.ipynb
+[W 2023-05-18 08:31:31.608 ServerApp] No such file or directory: seizures/DataProcessing.ipynb
+[W 2023-05-18 08:31:31.609 ServerApp] 404 GET /api/contents/seizures/DataProcessing.ipynb?content=0&1684416691546 (10.50.248.65) 0.72ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[W 2023-05-18 08:31:31.612 ServerApp] 404 GET /api/contents/seizures/transformer/SeizureClassificationSpectro_Transformer.ipynb?content=0&1684416691547 (10.50.248.65): No such file or directory: seizures/transformer/SeizureClassificationSpectro_Transformer.ipynb
+[W 2023-05-18 08:31:31.612 ServerApp] No such file or directory: seizures/transformer/SeizureClassificationSpectro_Transformer.ipynb
+[W 2023-05-18 08:31:31.613 ServerApp] 404 GET /api/contents/seizures/transformer/SeizureClassificationSpectro_Transformer.ipynb?content=0&1684416691547 (10.50.248.65) 0.71ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[W 2023-05-18 08:31:31.613 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/train_predictor.py?content=0&1684416691548 (10.50.248.65): No such file or directory: cell_stress/force_prediction_convnext/train_predictor.py
+[W 2023-05-18 08:31:31.613 ServerApp] No such file or directory: cell_stress/force_prediction_convnext/train_predictor.py
+[W 2023-05-18 08:31:31.614 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/train_predictor.py?content=0&1684416691548 (10.50.248.65) 0.70ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[W 2023-05-18 08:31:31.616 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/sbatch_train.sbatch?content=0&1684416691549 (10.50.248.65): No such file or directory: cell_stress/force_prediction_convnext/sbatch_train.sbatch
+[W 2023-05-18 08:31:31.616 ServerApp] No such file or directory: cell_stress/force_prediction_convnext/sbatch_train.sbatch
+[W 2023-05-18 08:31:31.617 ServerApp] 404 GET /api/contents/cell_stress/force_prediction_convnext/sbatch_train.sbatch?content=0&1684416691549 (10.50.248.65) 0.70ms referer=http://localhost:8112/lab/tree/train_predictor.py
+[I 2023-05-18 08:45:32.559 ServerApp] Saving file at /train_predictor.py
+slurmstepd: error: *** JOB 4458565 ON midway3-0219 CANCELLED AT 2023-05-19T08:38:15 ***

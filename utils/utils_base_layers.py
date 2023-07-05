@@ -24,13 +24,9 @@ activation_dict = { 'tanh': nn.Tanh(),
 
         
 
-class Flatten(nn.Module):
+class Flatten(nn.Module): # unnecessary, now there is a Flatten layer natively in torch
     def forward(self, x):
         return x.reshape((x.shape[0], -1))
-
-
-
-#        upsample = nn.Upsample(scale_factor=kernel, mode=mode)
 
 
 class DownsampleLayer(nn.Module):
@@ -87,7 +83,6 @@ class ConvNextCell(nn.Module):
 
     # Each block will consist of 3 convolutional layers. 
         self.conv0 = nn.Conv2d(in_out_channel, in_out_channel, 
-                                #groups=in_out_channel, kernel_size=kernel, stride=stride, dilation=dilation, padding=padding, padding_mode='reflect', bias=bias) #
                                 groups=in_out_channel, kernel_size=kernel, stride=stride, dilation=dilation, padding=padding, padding_mode='zeros', bias=bias) # used for too-small images
         self.conv1 = nn.Conv2d(in_out_channel, in_out_channel*inv_bottleneck_factor, 
                                 kernel_size=1, bias=bias)

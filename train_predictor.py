@@ -14,7 +14,6 @@ import utils.utils_data_processing as dp
 import matplotlib.pyplot as plt
 
 from utils.UNeXt import UNet
-
 from utils.utils_loss import loss_function_dict
 from utils.utils_callbacks import CallbackPlot, scalar_callback_dict
 
@@ -53,7 +52,6 @@ if __name__=='__main__':
 
 # Training and loss
     """
-
     optimization hparams: 'kernel_LR', 'LR'
     """
     ap.add_argument('--batch_size', type=int, default=8)
