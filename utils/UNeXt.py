@@ -9,9 +9,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from utils.utils_base_layers import DownsampleLayer, ConvNextCell
-from utils.utils_loss import loss_function_dict 
-import utils.utils_plot as utils_plot
+from utils.base_layers import DownsampleLayer, ConvNextCell
+from utils.loss import loss_function_dict 
+import utils.plot as utils_plot
 
 from torch.utils.tensorboard import SummaryWriter
 
@@ -70,7 +70,6 @@ class UNet(nn.Module):
         self.logger = SummaryWriter( self.logdir ) 
         self.index = model_idx
         self.logger.add_text('Name', self.name, global_step=0) 
-        self.metrics_dict = {}
 
 
 
@@ -382,10 +381,8 @@ class UNet(nn.Module):
 
         for key in train_loss:
             self.logger.add_scalar('Train/%s'%(key), train_loss[key], global_step=epoch) 
-            if train_loss[key] < self.metrics_dict['train_'+key]: self.metrics_dict['train_'+key] = train_loss[key]
         for key in val_loss:
             self.logger.add_scalar('Val/%s'%(key), val_loss[key], global_step=epoch) 
-            if val_loss[key] < self.metrics_dict['val_'+key]: self.metrics_dict['val_'+key] = val_loss[key]
 
         return
 

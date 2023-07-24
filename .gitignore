@@ -1,5 +1,10 @@
 data/
+tensorboard_logs
+*/__pycache__
 launch*
 jupyter*
 *checkpoints
 *pycache*
+*session*
+*tfevents*
+*.pyc
