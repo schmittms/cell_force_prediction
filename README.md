@@ -1,7 +1,13 @@
 
 # Summary
 
-This repository contains code to train a U-Net to predict forces from protein distributions, as described in https://arxiv.org/abs/2303.00176. 
+This repository contains code to train a U-Net to predict forces from protein distributions as described in [Machine learning interpretable models of cell mechanics from protein images](https://www.cell.com/cell/fulltext/S0092-8674(23)01331-4) ([arxiv](https://arxiv.org/abs/2303.00176)).
+
+The other two repositories for this paper are:
+ - Physical bottleneck analysis: https://github.com/schmittms/physical_bottleneck
+ - Green's function neural network: https://github.com/jcolen/gfnn
+
+This code was used to train the networks Figures 1-4. The trained model weights can be downloaded [here](https://uchicago.box.com/s/o6gpcdaxzv9t6ffus81o6we2226k3jc9), and in [load_trained_unet.ipynb](load_trained_unet.ipynb) we demonstrate how to load them. The raw data used for training can be downloaded from this [link](https://uchicago.box.com/s/s0poevx1iaa8f6iywv59uftbimjuoss1). Data pre-processing is described in the [DataProcessing.ipynb](DataProcessing.ipynb) notebook. This repository also contains a minimal working example notebook [train_unet.ipynb](train_unet.ipynb) which trains a U-Net on a small amount of data. This example dataset can be downloaded [here](https://uchicago.box.com/s/axbn54r31amvrnfck82hjmz01qsvd0ox). This notebook is for illustration purposes only; to train a network to the accuracy of those used in the paper, more data and longer training is needed.
 
 
 ## Data organization
