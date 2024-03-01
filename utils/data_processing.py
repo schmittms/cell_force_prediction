@@ -139,7 +139,7 @@ class CellDataset(Dataset):
         self.validation_split = validation_split
 
         self.in_channels = in_channels
-        self.in_unique = np.unique([int(x) for ch in self.in_channels for x in ch])
+        self.in_unique = in_channels#np.unique([int(x) for ch in self.in_channels for x in ch])
         self.out_channels = out_channels
         if transform_kwargs['magnitude_only']: self.out_channels = out_channels[0]
 
@@ -162,7 +162,7 @@ class CellDataset(Dataset):
                 
             self.split_bycell(frames_to_keep=frames_to_keep, n_cells=n_cells) # only impacts training
             
-        elif len(test_split.split(','))==4:
+        elif len(test_split.split(','))==4: # test_split='0,30,80,120' train data: [0, 30], test data: [80,120]
             test_split = list(map(int, test_split.split(',')))
             rng_train = test_split[:2]
             rng_test = test_split[2:]
@@ -497,6 +497,7 @@ class CellDataset(Dataset):
         
         if mask_crop: image = self.mask_crop(image)
 
+        in_unique = self.in_channels #for x in ch])
         in_unique = np.unique([int(x) for ch in self.in_channels for x in ch])
         if 4 in in_unique: image[4] /= np.max(image[4])
         if 6 in in_unique: image[6] = self.rm_baseline_zyx(image[6], idx) # to center around 0
