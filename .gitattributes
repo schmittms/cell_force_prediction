@@ -1,0 +1,5 @@
+# To ignore jupyter notebook linecount:
+*.ipynb linguist-documentation
+
+
+
